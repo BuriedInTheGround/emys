@@ -170,6 +170,7 @@ func generateFileHistory(id uint64, size int) []sse.Change[uint64] {
 			FileID: id,
 			Diff:   emys.Diff(old, new),
 		}
+		old = new
 	}
 	return changes
 }
